@@ -76,7 +76,7 @@ def extract_audio(filename, start_time, end_time, output_filename)
   `#{cmd.join(" ")}`
 end
 
-# --- MAIN ---
+# MAIN 
 if __FILE__ == $PROGRAM_NAME
   if ARGV.length < 2
     puts "Invalid arguments"
@@ -92,9 +92,6 @@ if __FILE__ == $PROGRAM_NAME
   current_dir = File.dirname(File.expand_path(__FILE__))
   output_dir = File.join(current_dir, file_parts.join)
   FileUtils.mkdir_p output_dir
-
-
-
 
   tracks = read_tracks
   tracks.each_with_index do |track, idx|
